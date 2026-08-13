@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------- */
+/* Design tokens — this is the place to start making the site your own.   */
+/* Swap these values for your own palette/type scale; components below    */
+/* reference them via Tailwind's `dark:` variant + these CSS variables.   */
+/* ---------------------------------------------------------------------- */
+:root {
+  color-scheme: light dark;
+  --color-bg: #ffffff;
+  --color-fg: #111827;
+  --color-muted: #6b7280;
+  --color-accent: #2563eb;
+  --color-border: #e5e7eb;
+}
+
+.dark {
+  --color-bg: #0b0f19;
+  --color-fg: #f9fafb;
+  --color-muted: #9ca3af;
+  --color-accent: #60a5fa;
+  --color-border: #1f2937;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
+}
+
+a {
+  color: inherit;
+}
