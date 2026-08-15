@@ -14,6 +14,18 @@ npm run dev
 
 Open the printed local URL. Edit files under `src/` — Vite hot-reloads on save.
 
+## Design
+
+The layout is inspired by [brittanychiang.com](https://brittanychiang.com/)'s well-known pattern:
+a fixed left sidebar (name, role, numbered nav with scrollspy, social links) next to a single
+scrolling column of numbered sections — About, Experience (tabbed job history), Projects
+(featured stacked cards + a grid of smaller ones), Contact. Two simplifications from the
+original: no mobile hamburger overlay (the sidebar just becomes a static top block on small
+screens), and no fixed edge social bars outside the sidebar.
+
+The color system is a light pastel theme built around sky blue (`--color-accent` in
+`src/index.css`), with a deep-navy dark variant wired up through the existing light/dark toggle.
+
 ## Where to start customizing
 
 - `src/index.css` — design tokens (colors, spacing baseline) at the top of the file. Start here.

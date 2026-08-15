@@ -1,25 +1,45 @@
 @import "tailwindcss";
 
 /* ---------------------------------------------------------------------- */
-/* Design tokens — this is the place to start making the site your own.   */
-/* Swap these values for your own palette/type scale; components below    */
-/* reference them via Tailwind's `dark:` variant + these CSS variables.   */
+/* Design tokens — pastel / sky-blue light theme by default, with a       */
+/* deep-navy dark variant (toggled via .dark on <html>) for anyone who    */
+/* wants the moodier version. Swap these values to make it yours.         */
 /* ---------------------------------------------------------------------- */
 :root {
-  color-scheme: light dark;
-  --color-bg: #ffffff;
-  --color-fg: #111827;
-  --color-muted: #6b7280;
-  --color-accent: #2563eb;
-  --color-border: #e5e7eb;
+  color-scheme: light;
+
+  --color-bg: #f5faff;           /* page background — barest hint of blue */
+  --color-surface: #eaf5ff;      /* sidebar / card fill */
+  --color-surface-2: #dcedfc;    /* nested / hovered surface */
+  --color-border: #cfe6fb;
+
+  --color-ink: #16253b;          /* headings */
+  --color-ink-muted: #4b6685;    /* body text */
+  --color-ink-faint: #7d97b3;    /* captions, numbers */
+
+  --color-accent: #0ea5e9;       /* sky-500 — links, active states */
+  --color-accent-soft: #7dd3fc;  /* sky-300 — decorative, tags */
+  --color-accent-tint: rgba(14, 165, 233, 0.1);
+
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
 }
 
 .dark {
-  --color-bg: #0b0f19;
-  --color-fg: #f9fafb;
-  --color-muted: #9ca3af;
-  --color-accent: #60a5fa;
-  --color-border: #1f2937;
+  color-scheme: dark;
+
+  --color-bg: #0b1220;
+  --color-surface: #101a2c;
+  --color-surface-2: #17233a;
+  --color-border: #22314b;
+
+  --color-ink: #e6f1ff;
+  --color-ink-muted: #9db3cf;
+  --color-ink-faint: #6c85a4;
+
+  --color-accent: #38bdf8;       /* sky-400 pops on navy */
+  --color-accent-soft: #0ea5e9;
+  --color-accent-tint: rgba(56, 189, 248, 0.12);
 }
 
 html,
@@ -30,16 +50,22 @@ body,
 
 body {
   background-color: var(--color-bg);
-  color: var(--color-fg);
-  font-family:
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    'Segoe UI',
-    Roboto,
-    sans-serif;
+  color: var(--color-ink-muted);
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--color-ink);
 }
 
 a {
   color: inherit;
+}
+
+::selection {
+  background-color: var(--color-accent-tint);
+  color: var(--color-ink);
 }

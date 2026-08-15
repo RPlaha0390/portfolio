@@ -1,21 +1,17 @@
 export default function Footer() {
-  const year = new Date().getFullYear()
-
   return (
-    <footer className="border-t border-[var(--color-border)]">
-      <div className="mx-auto flex max-w-4xl flex-col items-center gap-2 px-6 py-8 text-sm text-[var(--color-muted)] sm:flex-row sm:justify-between">
-        <p>© {year} Raman. Built with React, TypeScript &amp; Tailwind.</p>
-        <p>
-          <a
-            href="https://github.com/your-username/portfolio"
-            target="_blank"
-            rel="noreferrer"
-            className="transition-colors hover:text-[var(--color-fg)]"
-          >
-            View source
-          </a>
-        </p>
-      </div>
+    <footer className="mx-auto max-w-2xl px-6 py-12 text-center sm:px-12">
+      <p className="font-mono text-xs text-[var(--color-ink-faint)]">
+        Built with React, TypeScript &amp; Tailwind ·{' '}
+        <a
+          href="https://github.com/your-username/portfolio"
+          target="_blank"
+          rel="noreferrer"
+          className="underline decoration-[var(--color-border)] underline-offset-4 transition-colors hover:text-[var(--color-accent)]"
+        >
+          View source
+        </a>
+      </p>
     </footer>
   )
 }

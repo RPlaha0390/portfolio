@@ -1,31 +1,38 @@
 import { Link } from 'react-router-dom'
 import type { Project } from '@/data/projects'
+import { FolderIcon, ExternalLinkIcon, GitHubIcon } from './icons'
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <Link
-      to={`/projects/${project.slug}`}
-      className="group flex flex-col gap-3 rounded-xl border border-[var(--color-border)] p-5 transition-colors hover:border-[var(--color-accent)]"
-    >
-      <div className="flex items-start justify-between gap-2">
-        <h3 className="font-semibold group-hover:text-[var(--color-accent)]">{project.title}</h3>
-        <span aria-hidden className="text-[var(--color-muted)] transition-transform group-hover:translate-x-0.5">
-          →
-        </span>
+    <div className="group relative flex flex-col gap-4 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 transition-colors hover:border-[var(--color-accent)]">
+      <div className="flex items-start justify-between">
+        <FolderIcon className="text-[var(--color-accent)]" />
+        <div className="flex items-center gap-3 text-[var(--color-ink-faint)]">
+          {project.repoUrl && (
+            <a href={project.repoUrl} target="_blank" rel="noreferrer" aria-label="Source code" className="hover:text-[var(--color-accent)]">
+              <GitHubIcon width={18} height={18} />
+            </a>
+          )}
+          {project.liveUrl && (
+            <a href={project.liveUrl} target="_blank" rel="noreferrer" aria-label="Live site" className="hover:text-[var(--color-accent)]">
+              <ExternalLinkIcon />
+            </a>
+          )}
+        </div>
       </div>
 
-      <p className="text-sm text-[var(--color-muted)]">{project.summary}</p>
+      <div>
+        <Link to={`/projects/${project.slug}`} className="font-semibold text-[var(--color-ink)] group-hover:text-[var(--color-accent)]">
+          {project.title}
+        </Link>
+        <p className="mt-2 text-sm text-[var(--color-ink-muted)]">{project.summary}</p>
+      </div>
 
-      <ul className="mt-auto flex flex-wrap gap-2 pt-2">
+      <ul className="mt-auto flex flex-wrap gap-x-3 gap-y-1 font-mono text-xs text-[var(--color-ink-faint)]">
         {project.tags.map((tag) => (
-          <li
-            key={tag}
-            className="rounded-full border border-[var(--color-border)] px-2.5 py-0.5 text-xs text-[var(--color-muted)]"
-          >
-            {tag}
-          </li>
+          <li key={tag}>{tag}</li>
         ))}
       </ul>
-    </Link>
+    </div>
   )
 }

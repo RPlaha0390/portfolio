@@ -1,13 +1,15 @@
 import type { ReactNode } from 'react'
-import Header from './Header'
+import Sidebar from './Sidebar'
 import Footer from './Footer'
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <div className="flex min-h-full flex-col">
-      <Header />
-      <main className="flex-1">{children}</main>
-      <Footer />
+    <div className="lg:flex">
+      <Sidebar />
+      <main className="lg:ml-[22rem] lg:w-[calc(100%-22rem)]">
+        {children}
+        <Footer />
+      </main>
     </div>
   )
 }
