@@ -1,0 +1,117 @@
+<svg viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg" font-family="'Sora', 'IBM Plex Sans', ui-sans-serif, sans-serif">
+  <defs>
+    <clipPath id="frame"><rect x="0" y="0" width="1200" height="675" rx="14"/></clipPath>
+    <linearGradient id="bubbleGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6C4CFF"/>
+      <stop offset="100%" stop-color="#5B3DF5"/>
+    </linearGradient>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <!-- app surface -->
+    <rect x="0" y="0" width="1200" height="675" fill="#F7F8FA"/>
+
+    <!-- browser chrome -->
+    <rect x="0" y="0" width="1200" height="44" fill="#FFFFFF"/>
+    <rect x="0" y="43" width="1200" height="1" fill="#E5E7EB"/>
+    <circle cx="26" cy="22" r="6" fill="#F27059"/>
+    <circle cx="46" cy="22" r="6" fill="#F2C14E"/>
+    <circle cx="66" cy="22" r="6" fill="#2FB673"/>
+    <rect x="420" y="10" width="360" height="24" rx="12" fill="#F1F2F5"/>
+    <text x="600" y="26" text-anchor="middle" font-size="12" fill="#6B7280" font-family="'IBM Plex Mono', monospace">rplaha0390.github.io/chat-app</text>
+
+    <!-- sidebar -->
+    <rect x="0" y="44" width="340" height="631" fill="#FFFFFF"/>
+    <rect x="340" y="44" width="1" height="631" fill="#E5E7EB"/>
+
+    <text x="28" y="92" font-size="22" font-weight="700" fill="#1B1D23">Chats</text>
+    <circle cx="304" cy="85" r="16" fill="#5B3DF5"/>
+    <text x="304" y="90" text-anchor="middle" font-size="16" fill="#FFFFFF" font-weight="600">+</text>
+
+    <rect x="28" y="112" width="284" height="36" rx="10" fill="#F1F2F5"/>
+    <text x="44" y="135" font-size="13" fill="#9CA3AF">Search conversations</text>
+
+    <!-- conversation list items -->
+    <g font-family="'IBM Plex Sans', sans-serif">
+      <!-- item 1 active -->
+      <rect x="16" y="164" width="308" height="66" rx="12" fill="#F1EEFE"/>
+      <circle cx="52" cy="197" r="20" fill="#5B3DF5"/>
+      <text x="52" y="202" text-anchor="middle" font-size="14" fill="#FFFFFF" font-weight="600">JM</text>
+      <circle cx="66" cy="211" r="5" fill="#2FB673" stroke="#F1EEFE" stroke-width="2"/>
+      <text x="84" y="192" font-size="14" fill="#1B1D23" font-weight="600">Jamie Morales</text>
+      <text x="84" y="210" font-size="12" fill="#6B7280">Sounds good, see you then!</text>
+      <text x="300" y="180" text-anchor="end" font-size="10" fill="#9CA3AF">2m</text>
+
+      <!-- item 2 -->
+      <circle cx="52" cy="270" r="20" fill="#F2A93B"/>
+      <text x="52" y="275" text-anchor="middle" font-size="14" fill="#FFFFFF" font-weight="600">RK</text>
+      <text x="84" y="265" font-size="14" fill="#1B1D23" font-weight="600">Design Team</text>
+      <text x="84" y="283" font-size="12" fill="#6B7280">Priya: sent an attachment</text>
+      <text x="300" y="253" text-anchor="end" font-size="10" fill="#9CA3AF">18m</text>
+      <circle cx="304" cy="270" r="8" fill="#5B3DF5"/>
+      <text x="304" y="274" text-anchor="middle" font-size="10" fill="#FFFFFF" font-weight="700">3</text>
+
+      <!-- item 3 -->
+      <circle cx="52" cy="343" r="20" fill="#2FB673"/>
+      <text x="52" y="348" text-anchor="middle" font-size="14" fill="#FFFFFF" font-weight="600">SP</text>
+      <text x="84" y="338" font-size="14" fill="#1B1D23" font-weight="600">Sara Park</text>
+      <text x="84" y="356" font-size="12" fill="#6B7280">Typing…</text>
+      <text x="300" y="326" text-anchor="end" font-size="10" fill="#9CA3AF">1h</text>
+
+      <!-- item 4 -->
+      <circle cx="52" cy="416" r="20" fill="#8B7BFF"/>
+      <text x="52" y="421" text-anchor="middle" font-size="14" fill="#FFFFFF" font-weight="600">TL</text>
+      <text x="84" y="411" font-size="14" fill="#1B1D23" font-weight="600">Tom Lee</text>
+      <text x="84" y="429" font-size="12" fill="#6B7280">Thanks for the update</text>
+      <text x="300" y="399" text-anchor="end" font-size="10" fill="#9CA3AF">3h</text>
+
+      <!-- item 5 -->
+      <circle cx="52" cy="489" r="20" fill="#F27059"/>
+      <text x="52" y="494" text-anchor="middle" font-size="14" fill="#FFFFFF" font-weight="600">AV</text>
+      <text x="84" y="484" font-size="14" fill="#1B1D23" font-weight="600">Ana Vidal</text>
+      <text x="84" y="502" font-size="12" fill="#6B7280">Welcome to the group 👋</text>
+      <text x="300" y="472" text-anchor="end" font-size="10" fill="#9CA3AF">1d</text>
+    </g>
+
+    <!-- main chat header -->
+    <circle cx="380" cy="86" r="18" fill="#5B3DF5"/>
+    <text x="380" y="91" text-anchor="middle" font-size="12" fill="#FFFFFF" font-weight="600">JM</text>
+    <text x="410" y="82" font-size="15" fill="#1B1D23" font-weight="700">Jamie Morales</text>
+    <circle cx="412" cy="98" r="4" fill="#2FB673"/>
+    <text x="422" y="102" font-size="11" fill="#2FB673">Online</text>
+    <rect x="340" y="120" width="860" height="1" fill="#E5E7EB"/>
+
+    <!-- message thread -->
+    <g font-family="'IBM Plex Sans', sans-serif">
+      <!-- received -->
+      <rect x="368" y="152" width="300" height="52" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+      <text x="390" y="184" font-size="13" fill="#1B1D23">Hey! Are we still on for the sync tomorrow?</text>
+
+      <!-- sent -->
+      <rect x="792" y="222" width="240" height="52" rx="16" fill="url(#bubbleGrad)"/>
+      <text x="814" y="254" font-size="13" fill="#FFFFFF">Yep, 10am works for me 👍</text>
+
+      <!-- received -->
+      <rect x="368" y="292" width="340" height="52" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+      <text x="390" y="324" font-size="13" fill="#1B1D23">Perfect — I'll share the doc beforehand.</text>
+
+      <!-- sent -->
+      <rect x="852" y="362" width="180" height="52" rx="16" fill="url(#bubbleGrad)"/>
+      <text x="874" y="394" font-size="13" fill="#FFFFFF">Sounds good!</text>
+
+      <!-- typing indicator -->
+      <rect x="368" y="432" width="86" height="40" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+      <circle cx="394" cy="452" r="4" fill="#9CA3AF"/>
+      <circle cx="408" cy="452" r="4" fill="#9CA3AF"/>
+      <circle cx="422" cy="452" r="4" fill="#9CA3AF"/>
+    </g>
+
+    <!-- message input -->
+    <rect x="360" y="590" width="780" height="52" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+    <text x="384" y="622" font-size="13" fill="#9CA3AF">Type a message…</text>
+    <circle cx="1102" cy="616" r="20" fill="#5B3DF5"/>
+    <path d="M1096 608 L1112 616 L1096 624 Z" fill="#FFFFFF"/>
+  </g>
+
+  <rect x="0.5" y="0.5" width="1199" height="674" rx="14" fill="none" stroke="#E5E7EB"/>
+</svg>
