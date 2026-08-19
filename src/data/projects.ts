@@ -28,4 +28,17 @@ export interface Project {
  *   featured: true,
  * }
  */
-export const projects: Project[] = []
+export const projects: Project[] = [
+  {
+    slug: 'chat-app',
+    title: 'Chat App',
+    summary: 'Real-time 1-on-1 and group messaging app with a custom design system, built to learn the MERN stack end to end.',
+    description:
+      'A real-time chat application supporting direct messages and group conversations, built from scratch to learn the MERN stack. Features JWT-based auth, live messaging and typing indicators over Socket.IO, file attachments, and a custom Tailwind design system with light/dark mode. Backend and frontend are both covered by test suites (Jest/Supertest and Vitest/React Testing Library), and the app is deployed live with the client on GitHub Pages and the API on Render.',
+    tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Socket.IO', 'Tailwind CSS'],
+    liveUrl: 'https://rplaha0390.github.io/chat-app/',
+    repoUrl: 'https://github.com/RPlaha0390/chat-app',
+    image: '/projects/chat-app.svg',
+    featured: true,
+  },
+]

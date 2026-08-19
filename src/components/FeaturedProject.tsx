@@ -5,10 +5,17 @@ import { ExternalLinkIcon, GitHubIcon } from './icons'
 export default function FeaturedProject({ project }: { project: Project }) {
   return (
     <div className="grid gap-6 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 sm:grid-cols-[1fr_1.4fr] sm:p-8">
-      {/* Swap this placeholder for a real screenshot: <img src={project.image} ... /> */}
-      <div className="flex aspect-video items-center justify-center rounded-xl bg-[var(--color-surface-2)] font-mono text-xs text-[var(--color-ink-faint)] sm:aspect-auto">
-        add a screenshot
-      </div>
+      {project.image ? (
+        <img
+          src={project.image}
+          alt={`${project.title} preview`}
+          className="aspect-video w-full rounded-xl border border-[var(--color-border)] object-cover sm:aspect-auto sm:h-full"
+        />
+      ) : (
+        <div className="flex aspect-video items-center justify-center rounded-xl bg-[var(--color-surface-2)] font-mono text-xs text-[var(--color-ink-faint)] sm:aspect-auto">
+          add a screenshot
+        </div>
+      )}
 
       <div className="flex flex-col justify-center">
         <p className="font-mono text-xs text-[var(--color-accent)]">Featured Project</p>
