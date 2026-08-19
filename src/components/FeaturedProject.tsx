@@ -7,7 +7,7 @@ export default function FeaturedProject({ project }: { project: Project }) {
     <div className="grid gap-6 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 sm:grid-cols-[1fr_1.4fr] sm:p-8">
       {project.image ? (
         <img
-          src={project.image}
+          src={`${import.meta.env.BASE_URL}${project.image.replace(/^\//, '')}`}
           alt={`${project.title} preview`}
           className="aspect-video w-full rounded-xl border border-[var(--color-border)] object-cover sm:aspect-auto sm:h-full"
         />
